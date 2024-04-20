@@ -1,0 +1,133 @@
+*,
+*::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+}
+
+.title {
+    text-align: center;
+    background-color: #dfe0ff;
+}
+
+#languageChoice {
+    border: 1px solid hotpink;
+    display: flex;
+    justify-content: right;
+}
+
+#gaeilge,
+#english,
+#submit-project-btn,
+.delete-project,
+.add-info,
+#done-button {
+    background-color: #dfe0ff;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    margin: .5em;
+    padding: .3em;
+    border-radius: .3em;
+    transition-duration: 0.4s;
+}
+
+#gaeilge:hover,
+#english:hover,
+#submit-project-btn:hover,
+.delete-project:hover,
+.add-info:hover,
+#done-button:hover {
+    background-color: #ffffff;
+}
+
+#container {
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+}
+
+#sidebar {
+    border: 1px solid blue;
+}
+
+.project-item.active {
+    border: 1px solid brown;
+    background-color:  #fbffe2;    
+}
+
+.project-info {
+    margin: .4em;
+    /* border: 1px solid green; */
+    background-color: #ffffff;
+}
+
+#user-projects-section {
+    border: 1px solid pink;
+}
+
+#project-section {
+    border: 1px solid teal;
+    /* height: 100vh; */
+}
+
+#task-section {
+    border: 1px solid green;
+}
+
+.my-project-tasks {
+    margin: 2em;
+}
+
+textarea {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    height: 1.4em;
+    resize: none;
+    border: 1px solid blue;
+    outline: none;
+    overflow: auto;
+    background-color:  #fbffe2; 
+}
+
+.task-item {
+    margin: 0.3em;
+}
+
+input[type=checkbox]:checked + label,
+input[type=checkbox]:checked + label > * {
+    text-decoration: line-through;
+    color: gray;
+}
+
+dialog {
+    padding: 1em;
+    max-width: 50ch;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start
+
+    }
+}

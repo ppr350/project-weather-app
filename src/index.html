@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-to-do-list</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1 class="title">LIOSTA A DHÉANAMH</h1>
+    <div id="languageChoice">
+        <button id="gaeilge">GAEILGE</button>
+        <button id="english">ENGLISH</button>
+    </div>
+
+    <div id="container">
+        <div id="sidebar-section">
+
+            <div id="user-projects-section">
+                <input type="text" id="user-input-project">
+                <button type="submit" id="submit-project-btn">TIONSCADAL NUA</button>
+            </div>
+
+            <div id="project-section">
+                <h2 class="my-projects">MO THIONSCADAIL</h2>
+                <div id="projects">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="task-section">
+
+            <div id="user-tasks-section"></div>
+            <h2 class="my-tasks-title">TASCANNA TIONSCADAIL</h2>
+            <div class="my-project-tasks" id="all-tasks"></div>
+        </div>
+
+    </div>
+
+    <template id="project-template">
+        <div class="project-item">
+            <input type="checkbox" class="checkbox">
+            <label>
+                <span class="project-name"></span>
+            </label>
+        </div>
+    </template>
+
+    <template id="info-template">
+        <div class="project-info">
+            <p class="project-description"></p>
+            <p class="project-due-date"></p>
+            <p class="project-priority"></p>
+        </div>
+    </template>
+
+    <template id="task-template">
+        <div class="task-item">
+            <input type="checkbox" class="checkbox">
+            <label>
+                <textarea class="task-textarea" cols="30" rows="1" minlength="1" maxlength="30"></textarea>
+            </label>
+        </div>
+    </template>
+
+    <template id="task-input-template">
+        <div id=""></div>
+    </template>
+
+    <div id="dialog-container">
+        <dialog id="get-info-dialog" class="dialog">
+            <form action="" method="dialog" id="form" name="get-info">
+                <fieldset>
+                    <p id="info-title">EOLAS TIONSCADAIL</p>
+                    <p id="description-section">
+                        <label for="description">CUNTAS</label>
+                        <input
+                            type="text"
+                            id="description"
+                            name="description"
+                            >
+                    </p>
+                    <p id="due-date-section">
+                        <label for="due-date">DÁTA DLITE</label>
+                        <input
+                            type="date"
+                            id="due-date"
+                            name="due-date"
+                            >
+                    </p>
+                    <p id="priority-section">
+                        <p id="priority">TOSAÍOCHT</p>
+                        <input type="radio" id="low-priority" name="priority" value="low">
+                        <label for="low-priority">ÍSEAL</label>
+                        <input type="radio" id="medium-priority" name="priority" value="medium">
+                        <label for="medium-priority">MEÁNACH</label>
+                        <input type="radio" id="high-priority" name="priority" value="high">
+                        <label for="high-priority">ARD</label>
+                    </p>
+                    <div id="add-info">
+                        <button
+                            class="button"
+                            id="done-button"
+                            type="submit">DÉANTA</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </dialog>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,5 +1,8 @@
 import "./style.css";
 import { callWeatherApi } from "./weatherApi";
+import { getUserLocation } from "./userLocation";
 
-
-callWeatherApi();
+window.onload = function() {
+    callWeatherApi('cork')
+    getUserLocation()
+}

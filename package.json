@@ -1,7 +1,7 @@
 {
-  "name": "project-to-do-list",
+  "name": "project-weather-app",
   "version": "1.0.0",
-  "description": "Project To do List",
+  "description": "Project Weather App",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,9 +21,15 @@
   },
   "homepage": "https://github.com/ppr350/project-to-do-list#readme",
   "devDependencies": {
-    "css-loader": "^6.8.1",
+    "css-loader": "^6.11.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
     "html-webpack-plugin": "^5.6.0",
-    "style-loader": "^3.3.3",
+    "prettier": "3.2.5",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },

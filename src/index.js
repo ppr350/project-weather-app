@@ -1,13 +1,18 @@
 import "./style.css";
-import { callWeatherApi } from "./weatherApi";
 import { getUserLocation } from "./userLocation";
+import { updateDisplay } from "./createDomElements";
 
-const userCity = document.querySelector('#user-city')
+const userInputCity = document.querySelector('#user-city')
 const okButton = document.querySelector('#btn')
+const displayForecast = document.querySelector('#display-forecast')
+const cityName = document.querySelector('#city-name')
+const contentOnscreen = document.querySelectorAll('.content-onscreen')
+const cityOnscreen = document.querySelectorAll('.city-onscreen')
+const dateOnscreen = document.querySelectorAll('.date-onscreen')
 
-window.onload = function() {
-    callWeatherApi('cork')
+window.onload = () => {
     getUserLocation()
+    updateDisplay()
 }
 
-export { userCity, okButton }
+export { userInputCity, okButton, displayForecast, cityName, contentOnscreen, cityOnscreen, dateOnscreen }

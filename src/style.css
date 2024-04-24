@@ -20,8 +20,44 @@ html {
 body {
   font-family: system-ui, sans-serif;
   font-size: 1rem;
+  background-color: #e6f1e1;
 }
 
 #title {
+  font-size: var(--fontsize--large);
   color: blue;
+}
+
+label {
+  font-size: var(--fontsize--medium);
+}
+
+button {
+  background-color: #fff;
+  cursor: pointer;
+  font-size: var(--fontsize--small);
+}
+
+#city-name {
+  font-size: var(--fontsize--large);
+  background-color: #d9d2e9;
+}
+
+#display-forecast {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  outline: 1px solid #ffaaa6;
+  padding: 1rem;
+  font-size: var(--fontsize--medium);
+}
+
+#error-icon {
+  max-width: 30px;
+}
+
+#error-message {
+  font-size: 1.8rem;
 }

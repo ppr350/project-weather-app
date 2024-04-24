@@ -1,13 +1,20 @@
-import { userCity, okButton } from "./index";
+import { userInputCity, okButton } from "./index";
+import { saveCity } from "./localStorage";
+import { updateDisplay } from "./createDomElements";
+
+let cityToDisplay
 
 function getUserLocation() {
     okButton.addEventListener('click', (e) => {
         e.preventDefault()
-        console.log(e)
-        const city = userCity.value.toLowerCase()
-        console.log(city)
-        userCity.value = ''
+        if (userInputCity.value !== '') {
+            cityToDisplay = userInputCity.value.toLowerCase()
+            console.log(cityToDisplay)
+            saveCity(cityToDisplay)
+            userInputCity.value = ''
+            updateDisplay()
+        }
     })
 }
 
-export { getUserLocation }
+export { getUserLocation, cityToDisplay }

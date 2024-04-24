@@ -1,4 +1,5 @@
-import { values } from "lodash";
+import { createContent } from "./createDomElements";
+import { displayError } from "./errorHandling";
 
 async function callWeatherApi(place) {
     try {
@@ -8,30 +9,19 @@ async function callWeatherApi(place) {
           );
         const responseJson = await response.json();
         weatherForecast(responseJson.forecast.forecastday)
-
         return responseJson
 
     } catch(error) {
-        throw new Error(error.code)
+        console.log(error)
+        displayError()
     }
-
 }
 
 function weatherForecast(values) {
     for (let i = 0; i < values.length; i++) {
-        console.log(values[i])
-        console.log(`
-            Date: ${values[i].date},
-            Sunrise: ${values[i].astro.sunrise},
-            Sunset: ${values[i].astro.sunset},
-            Max Temperature: ${values[i].day.maxtemp_c}°C,
-            Min Temperature: ${values[i].day.mintemp_c}°C,
-            Precipiutation: ${values[i].day.totalprecip_mm}mm,
-            Condition: ${values[i].day.condition.text},
-            UV Index: ${values[i].day.uv}`)
+        createContent(values[i])
     }
-
 }
 
 
-export { callWeatherApi }
+export { callWeatherApi, weatherForecast }

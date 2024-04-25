@@ -4,7 +4,7 @@ import { displayError } from "./errorHandling";
 async function callWeatherApi(place) {
     try {
         const response = await fetch(
-            `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=f2eb902d7da44680b97101422242004&q=${place}&days=3&aqi=no&alerts=no`,
+            `https://api.weatherapi.com/v1/forecast.json?key=f2eb902d7da44680b97101422242004&q=${place}&days=3&aqi=no&alerts=no`,
             { mode: "cors" },
           );
         const responseJson = await response.json();

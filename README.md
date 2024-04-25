@@ -46,3 +46,4 @@ The Odin Project for providing such an amazing free course
 
 Weather API
 
+Sekolan from The Odin Project Discord for helping me solved api link not working
